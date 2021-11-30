@@ -7,8 +7,6 @@ D3 N014 +Vcc D
 D4 -Vcc N014 D
 C1 +Vcc 0 4000µ
 C2 -Vcc 0 4000µ
-V3 0 -5v_antigo 5
-V4 +5v_antigo 0 5
 R21 Vprot_in+ Vout+ 0.1
 R22 N002 Vprot_in+ 10k
 R23 N010 Vout+ 10k
@@ -16,7 +14,6 @@ R24 N002 0 200k
 R25 N010 N008 200k
 XU3 N002 N010 +5v -5v N008 level3a Avol=1Meg GBW=10Meg Slew=10Meg Ilimit=25m Rail=0 Vos=0 Phimargin=45 En=0 Enk=0 In=0 Ink=0 Rin=500Meg Ro=1k Ccm=1p Cdiff=2p
 XU4 N008 +2.1v +5v -5v N011 level3a Avol=1Meg GBW=10Meg Slew=10Meg Ilimit=25m Rail=0 Vos=0 Phimargin=45 En=0 Enk=0 In=0 Ink=0 Rin=500Meg Ro=1k Ccm=1p Cdiff=2p
-V5 +2.1v_antigo 0 2.1
 A1 +5v 0 N011 0 0 0 N005 0 DFLOP
 XU5 N005 N009 +5v -5v Vprot+ level3a Avol=1Meg GBW=10Meg Slew=10Meg Ilimit=25m Rail=0 Vos=0 Phimargin=45 En=0 Enk=0 In=0 Ink=0 Rin=500Meg Ro=1k Ccm=1p Cdiff=2p
 R26 Vprot+ N009 4k
@@ -25,7 +22,7 @@ R17 N004 N003 50
 R18 Vout+ N013 4.5k
 R19 N013 N006 18k
 R20 0 N006 10k
-R_load+ Vout+ 0 5
+R_load+ Vout+ 0 15
 Q4 +Vcc N004 Vprot_in+ 0 FZT849
 XU6 +Vref N006 +Vcc -5v N003 level3a Avol=1Meg GBW=10Meg Slew=10Meg Ilimit=25m Rail=0 Vos=0 Phimargin=45 En=0 Enk=0 In=0 Ink=0 Rin=500Meg Ro=1k Ccm=1p Cdiff=2p
 R30 +Vcc N007 4k
@@ -63,14 +60,18 @@ R5 N028 N026 10k
 D5 0 N028 BZX84C6V2L
 Q2 N026 N028 +5V 0 2N3391A
 R6 N031 -Vcc 50k
-R12 N033 N031 10k
-D6 N033 0 BZX84C6V2L
-Q3 N031 N033 -5V 0 2N4126
-D9 N030 N032 RR2L4S
-D10 N029 N030 RR2L4S
-D11 +2.1v N029 RR2L4S
+R12 N034 N031 10k
+D6 N034 0 BZX84C6V2L
+Q3 N031 N034 -5V 0 2N4126
+D9 N030 0 1N4148
+D10 N029 N030 1N4148
+D11 +2.1v N029 1N4148
 R13 +Vcc +2.1v 100k
-D12 N032 0 RR2L4S
+D12 0 0 RR2L4S
+D13 N032 0 NSSWS108T
+D14 0 N033 NSSWS108T
+R14 Vprot+ N032 150
+R15 Vprot- N033 150
 .model D D
 .lib D:\Arquivos\Documents\LTspiceXVII\lib\cmp\standard.dio
 .model NPN NPN
@@ -81,6 +82,9 @@ D12 N032 0 RR2L4S
 * Fontes auxiliares
 * Estágio de ganho (+)
 * Estágio de ganho (-)
+* Circuito de proteção digital (+)
+* Circuito de proteção digital (-)
+* Indicadores de funcionamento
 .lib UniversalOpamp.lib
 .backanno
 .end
