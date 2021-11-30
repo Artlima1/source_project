@@ -7,22 +7,11 @@ D3 N014 +Vcc D
 D4 -Vcc N014 D
 C1 +Vcc 0 4000µ
 C2 -Vcc 0 4000µ
-R4 -Vcc N030 4k
-D6 N030 0 1N750
-R5 N030 -Vref 1
-R6 -Vref 0 10k
 V3 0 -5v 5
 V4 +5v 0 5
-R12 N028 N027 100
-R13 N032 N031 1k
-R14 N031 N029 20k
-R15 0 N029 10k
-R16 N032 0 15
-Q2 -Vcc N028 N032 0 FZT849
-XU2 -Vref N029 +5v -Vcc N027 level.2 Avol=1Meg GBW=10Meg Slew=10Meg ilimit=25m rail=0 Vos=0 phimargin=45 en=0 enk=0 in=0 ink=0 Rin=500Meg
-R21 Vprot_in+ Vprot_out+ 0.1
+R21 Vprot_in+ Vout+ 0.1
 R22 N002 Vprot_in+ 10k
-R23 N010 Vprot_out+ 10k
+R23 N010 Vout+ 10k
 R24 N002 0 200k
 R25 N010 N008 200k
 XU3 N002 N010 +5v -5v N008 level.2 Avol=1Meg GBW=10Meg Slew=10Meg ilimit=25m rail=0 Vos=0 phimargin=45 en=0 enk=0 in=0 ink=0 Rin=500Meg
@@ -33,10 +22,10 @@ XU5 N005 N009 +5v -5v Vprot+ level.2 Avol=1Meg GBW=10Meg Slew=10Meg ilimit=25m r
 R26 Vprot+ N009 4k
 R27 0 N009 1k
 R17 N004 N003 50
-R18 Vprot_out+ N013 4.5k
+R18 Vout+ N013 4.5k
 R19 N013 N006 18k
 R20 0 N006 10k
-R29 Vprot_out+ 0 15
+R_load+ Vout+ 0 5
 Q4 +Vcc N004 Vprot_in+ 0 FZT849
 XU6 +Vref N006 +Vcc -5v N003 level.2 Avol=1Meg GBW=10Meg Slew=10Meg ilimit=25m rail=0 Vos=0 phimargin=45 en=0 enk=0 in=0 ink=0 Rin=500Meg
 R30 +Vcc N007 4k
@@ -47,28 +36,28 @@ R33 -Vcc N024 4k
 D8 N024 0 1N750
 R34 N024 -Vref 1
 R35 -Vref 0 10k
-R36 N016 N015 50
-R37 Vprot_out- N025 4.5k
-R38 N025 N018 18k
-R39 0 N018 10k
-R40 Vprot_out- 0 5
-XU7 -Vref N018 +5v -Vcc N015 level.2 Avol=1Meg GBW=10Meg Slew=10Meg ilimit=25m rail=0 Vos=0 phimargin=45 en=0 enk=0 in=0 ink=0 Rin=500Meg
-Q5 -Vcc N016 Vprot_in- 0 2N2907
+R36 N017 N016 50
+R37 Vout- N025 4.5k
+R38 N025 N019 18k
+R39 0 N019 10k
+R_load- Vout- 0 5
+XU7 -Vref N019 +5v -Vcc N016 level.2 Avol=1Meg GBW=10Meg Slew=10Meg ilimit=25m rail=0 Vos=0 phimargin=45 en=0 enk=0 in=0 ink=0 Rin=500Meg
+Q5 -Vcc N017 Vprot_in- 0 2N2907
 Q6 N007 N012 0 0 2N2222
 R41 N012 Vprot+ 1k
-R1 Vprot_out- Vprot_in- 0.1
-R2 N017 Vprot_out- 10k
+R1 Vout- Vprot_in- 0.1
+R2 N018 Vout- 10k
 R3 N022 Vprot_in- 10k
-R7 N017 0 200k
-R8 N022 N020 200k
-XU1 N017 N022 +5v -5v N020 level.2 Avol=1Meg GBW=10Meg Slew=10Meg ilimit=25m rail=0 Vos=0 phimargin=45 en=0 enk=0 in=0 ink=0 Rin=500Meg
-XU8 N020 +2.1v +5v -5v N023 level.2 Avol=1Meg GBW=10Meg Slew=10Meg ilimit=25m rail=0 Vos=0 phimargin=45 en=0 enk=0 in=0 ink=0 Rin=500Meg
-A2 +5v 0 N023 0 0 0 N019 0 DFLOP
-XU9 N019 N021 +5v -5v Vprot- level.2 Avol=1Meg GBW=10Meg Slew=10Meg ilimit=25m rail=0 Vos=0 phimargin=45 en=0 enk=0 in=0 ink=0 Rin=500Meg
-R9 Vprot- N021 4k
-R10 0 N021 1k
+R7 N018 0 200k
+R8 N022 N021 200k
+XU1 N018 N022 +5v -5v N021 level.2 Avol=1Meg GBW=10Meg Slew=10Meg ilimit=25m rail=0 Vos=0 phimargin=45 en=0 enk=0 in=0 ink=0 Rin=500Meg
+XU8 N021 +2.1v +5v -5v N023 level.2 Avol=1Meg GBW=10Meg Slew=10Meg ilimit=25m rail=0 Vos=0 phimargin=45 en=0 enk=0 in=0 ink=0 Rin=500Meg
+A2 +5v 0 N023 0 0 0 N020 0 DFLOP
+XU9 0 N015 +5v -5v Vprot- level.2 Avol=1Meg GBW=10Meg Slew=10Meg ilimit=25m rail=0 Vos=0 phimargin=45 en=0 enk=0 in=0 ink=0 Rin=500Meg
 R11 N026 Vprot- 1k
-Q1 N024 N026 0 0 2N2222
+Q1 N024 N026 0 0 PNP
+R9 N015 N020 1k
+R10 Vprot- N015 5k
 .model D D
 .lib C:\Program Files (x86)\lib\cmp\standard.dio
 .model NPN NPN
@@ -76,9 +65,7 @@ Q1 N024 N026 0 0 2N2222
 .lib C:\Program Files (x86)\lib\cmp\standard.bjt
 * Estágio retificador com filtro capacitivo
 .tran 0.1s
-* Estágio regulador de tensão (-)
 * Fontes auxiliares
-* Estágio de ganho (-)
 * Estágio de ganho (+)
 * Estágio de ganho (-)
 .lib UniversalOpamps2.sub
