@@ -10,84 +10,57 @@ Gmin = 0.00132923
 Gmin = 0.000142725
 vernier = 0.5
 vernier = 0.25
-Gmin = 2.99316e-005
 vernier = 0.125
-vernier = 0.0625
-vernier = 0.03125
-vernier = 0.015625
-vernier = 0.0078125
-vernier = 0.00390625
-vernier = 0.00195313
-vernier = 0.000976563
-Gmin = 2.99169e-005
-vernier = 0.00130208
-vernier = 0.00173611
-Gmin = 2.98238e-005
-vernier = 0.00231481
-Gmin = 2.96732e-005
-vernier = 0.00308642
+Gmin = 4.53508e-005
+vernier = 0.166667
+Gmin = 3.13875e-005
+vernier = 0.222222
+vernier = 0.296296
+Gmin = 1.70504e-005
+vernier = 0.395061
+vernier = 0.197531
+vernier = 0.263374
+Gmin = 1.08969e-005
+vernier = 0.131687
+vernier = 0.0658435
+vernier = 0.0329218
+vernier = 0.0164609
+vernier = 0.00823044
 vernier = 0.00411522
-Gmin = 2.94282e-005
-vernier = 0.00548696
-vernier = 0.00731595
-Gmin = 2.90441e-005
-vernier = 0.00975459
-Gmin = 2.84316e-005
-vernier = 0.0130061
-vernier = 0.0173415
-Gmin = 2.74567e-005
-vernier = 0.023122
-vernier = 0.0308293
-Gmin = 2.59811e-005
-vernier = 0.0411057
-Gmin = 2.37566e-005
-vernier = 0.0548076
-vernier = 0.0730768
-Gmin = 2.05256e-005
-vernier = 0.0974357
-vernier = 0.129914
-Gmin = 1.62972e-005
-vernier = 0.173219
-Gmin = 1.1237e-005
-vernier = 0.230959
-vernier = 0.307945
-vernier = 0.153972
-vernier = 0.0769862
-Gmin = 7.69075e-006
-vernier = 0.0384931
-vernier = 0.0192465
-vernier = 0.00962327
-vernier = 0.00481163
-vernier = 0.00240582
-vernier = 0.00120291
-vernier = 0.000601454
-vernier = 0.000451091
+vernier = 0.00205761
+vernier = 0.00102881
+vernier = 0.000514403
+Gmin = 0
 Gmin = 0
 Gmin stepping failed
 
 Starting source stepping with srcstepmethod=0
 Source Step = 3.0303%
-Source Step = 33.3333%
-Source Step = 63.6364%
-Source Step = 93.9394%
-Source stepping succeeded in finding the operating point.
+vernier = 0.25
+Source Step = 0.0177557%
+Starting source stepping with srcstepmethod=1
+Source Step = 3.0303%
+vernier = 0.25
+Source stepping failed
 
+Pseudo Transient succeeded in finding the operating point.
 
-Date: Mon Nov 29 17:03:46 2021
-Total elapsed time: 0.556 seconds.
+Date: Mon Nov 29 23:16:30 2021
+Total elapsed time: 1.214 seconds.
 
 tnom = 27
 temp = 27
 method = modified trap
-totiter = 6922
-traniter = 3487
-tranpoints = 1415
-accept = 1303
-rejected = 112
-matrix size = 51
-fillins = 53
+totiter = 13118
+traniter = 3765
+tranpoints = 1439
+accept = 1316
+rejected = 353
+matrix size = 77
+fillins = 103
 solver = Normal
-Matrix Compiler1: 5.88 KB object code size  1.8/0.9/[0.6]
-Matrix Compiler2: 5.83 KB object code size  2.0/1.8/[0.8]
+Thread vector: 65.0/38.5[2] 3.5/2.6[2] 1.7/2.2[1] 1.0/1.7[1]  2592/500
+Matrix Compiler1: 10.24 KB object code size  2.4/1.1/[0.7]
+Matrix Compiler2: 9.56 KB object code size  1.6/2.2/[1.6]
 
 
